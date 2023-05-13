@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Camera_Gallery</title>
+</head>
+<body>
+    <div class="timer-cont">
+        00:00:00
+    </div>
+    <div class="vid-cont">
+        <video autoplay >video will be displayed here</video>
+    </div>
+    <div class="action-cont">
+        <div class="record-cont">
+            <div class="record-btn "></div>
+        </div>
+        <div class="capture-cont">
+            <div class="capture-btn "></div>
+        </div>
+    </div>
+    <div class="canvas_cont">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="img_cont">
+        <img id="photo" alt="" />
+        <!-- the image capture will appear in this box -->
+    </div>
+    <div class="filter-cont">
+        <div class="filter orange"></div>
+        <div class="filter brown"></div>
+        <div class="filter pink"></div>
+        <div class="filter transparent"></div>
+    </div>
+    <div class="Gallery-icon-cont">
+        <div class="gallery-icon" >
+        🌫️
+        </div>
+    </div>
+    <div class="filter-layer"></div>
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+    <script src="./indexDb.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        let gallery_icon = document.querySelector(".gallery-icon");
+        gallery_icon.addEventListener("click" , e=>{
+            location.assign("./gallery.html");
+        })
+    </script>
+</body>
+</html>

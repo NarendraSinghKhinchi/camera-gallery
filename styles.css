@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.timer-cont{
+    position: absolute;
+    bottom: 10vh;
+    border: 1px solid white;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+.vid-cont{
+    height: 100vh;
+    /* width: 100vw; */
+}
+video{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+}
+.action-cont{
+    height: 12rem;
+    width: 5rem;
+    position: absolute;
+    top:calc( ( 100vh - 10rem ) / 2 );
+    right: 10px;
+    /* background-color: rgb(49, 210, 111); */
+    color: rgb(250, 18, 18);
+    /* border: 2px solid saddlebrown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.action-cont >*{
+    width: 100%;
+    height: 5rem;
+    border-radius: 50%;
+    /* background-color: burlywood; */
+    border: 3px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record-btn{
+    background-color: red;
+    width: 3rem;
+    height: 3rem;
+    border-radius:50% ;
+}
+.capture-btn{
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+.scale-capture{
+    animation-name: scale-record;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+#canvas{
+    display: none;
+}
+#photo{
+    display: none;
+}
+.filter-cont{
+    position: absolute;
+    top: calc((100vh - 25rem)/2);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 22rem;
+    width: 20%;
+    max-width: 12rem;
+    z-index: 2;
+}
+.filter{
+    width: 70%;
+    height: 15%;
+    background-image: url(https://picsum.photos/id/13/367/267);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: color-burn;
+}
+.orange{
+    background-color: #ffa50052;
+}
+.brown{
+    background-color:  #a52a2a59 ;
+}
+.pink{
+    background-color: #ffc0cb57;
+}
+.original{
+    background-color: transparent;
+}
+.filter-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    opacity: 40%;
+}
+.Gallery-icon-cont{
+    /* background-color: antiquewhite; */
+    position: absolute;
+    right: 2%;
+    bottom: 11%;
+    font-size: 50px;
+    z-index: 2;
+}
+.Gallery-icon-cont :hover{
+    cursor:grab;
+}
+
+
+
